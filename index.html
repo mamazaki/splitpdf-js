@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split PDF by Page Numbers</title>
+</head>
+<body>
+    <h1>Split PDF by Page Numbers</h1>
+    <input type="file" id="pdfFile" accept="application/pdf">
+    <input type="file" id="txtFile" accept="text/plain">
+    <button id="splitButton">Split PDF</button>
+    <button id="downloadAllButton" style="display: none;">Download All</button>
+    <div id="output"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
