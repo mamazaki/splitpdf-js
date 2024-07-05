@@ -23,7 +23,7 @@ document.getElementById('splitButton').addEventListener('click', async () => {
         const pageNumber = parseInt(pageNumberStr.trim()) - 1;
 
         if (isNaN(pageNumber) || pageNumber < 0 || pageNumber >= pdfDoc.getPageCount()) {
-            outputDiv.innerHTML += `<p>Invalid page number for ${name}</p>`;
+            outputDiv.innerHTML += `<p class="text-danger">Invalid page number for ${name}</p>`;
             continue;
         }
 
@@ -37,6 +37,7 @@ document.getElementById('splitButton').addEventListener('click', async () => {
         link.href = URL.createObjectURL(blob);
         link.download = `${name}.pdf`;
         link.textContent = `Download ${name}.pdf`;
+        link.className = 'btn btn-link';
         outputDiv.appendChild(link);
         outputDiv.appendChild(document.createElement('br'));
 
